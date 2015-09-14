@@ -10,28 +10,25 @@ import UIKit
 
 class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var tillerTableView: UITableView!
     
-    @IBOutlet weak var tiller: UIView!
+    @IBOutlet weak var TillerTableView: UITableView!
+    
     var candidates : Bool?
+    
+    let imagesArray = ["bush", "carson","christie", "trump"]
 
     @IBOutlet weak var candidatesOrOfficials: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let tapGesture = UITapGestureRecognizer(target: self, action: "rotate")
-//        self.view.addGestureRecognizer(tapGesture)
-
         let url = NSURL(string: "https://staging.voteraide.com/api/users")
         let request = NSURLRequest(URL: url!)
         let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
-//        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response, data, error) -> Void in
-//            
-//            println(response)
-//            println(data)
-//            println(error)
-//        }
+
         candidates = false
+        
+//        self.TillerTableView.rowHeight = UITableViewAutomaticDimension
+//        self.TillerTableView.estimatedRowHeight = 400
     }
     
     func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
@@ -54,28 +51,30 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
     func rotate()
     {
 //        let degrees = 20
-        tiller.transform = CGAffineTransformMakeRotation(CGFloat(70 * M_PI/180))
+//        tiller.transform = CGAffineTransformMakeRotation(CGFloat(70 * M_PI/180))
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if candidates == false
-        {
+//        if candidates == false
+//        {
             let cell = tableView.dequeueReusableCellWithIdentifier("Official") as! TillerOfficialTableViewCell
-            
+        
+            cell.officialsImageView.image = UIImage(named: imagesArray[indexPath.row])
+
             return cell
-        }
-        else
-        {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as! TillerTableViewCell
-            
-            cell.candidateName.text = "Ronald Regean"
-            return cell
-        }
+//        }
+//        else
+//        {
+//            let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as! TillerTableViewCell
+//            
+//            cell.candidateName.text = "Ronald Regean"
+//            return cell
+//        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return imagesArray.count
     }
     
     @IBAction func candidatesOrOfficialsTape(sender: AnyObject)

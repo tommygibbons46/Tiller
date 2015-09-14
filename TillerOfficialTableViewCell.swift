@@ -12,12 +12,15 @@ class TillerOfficialTableViewCell: UITableViewCell {
 
     @IBOutlet weak var officialImageView: UIImageView!
     
+    @IBOutlet weak var officialsImageView: UIImageView!
+    
     @IBOutlet weak var tiller: UIImageView!
+    
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        officialImageView.image = UIImage(named: "bush")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
