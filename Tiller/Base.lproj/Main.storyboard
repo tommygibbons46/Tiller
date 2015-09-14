@@ -838,6 +838,34 @@
                                             <outlet property="tiller" destination="JfH-24-8e5" id="GLv-sE-8l2"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Candidates" id="ltk-be-AXv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ltk-be-AXv" id="NLw-Tv-RPy">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carousel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oy-1K-ZJy">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="166" y="79" width="68" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="1oy-1K-ZJy"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="1oy-1K-ZJy"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="iVv-KA-i76" id="Een-xg-7Ja"/>
@@ -902,12 +930,14 @@
                             </variation>
                             <connections>
                                 <action selector="candidatesOrOfficialsTape:" destination="iVv-KA-i76" eventType="valueChanged" id="bfU-ql-4Of"/>
+                                <action selector="segmentControlTap:" destination="iVv-KA-i76" eventType="valueChanged" id="SaC-vU-Eq5"/>
                             </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="TillerTableView" destination="80H-Zb-KbM" id="nfC-fN-nH7"/>
                         <outlet property="candidatesOrOfficials" destination="OP1-W1-VXr" id="k0N-D9-fKg"/>
+                        <outlet property="officialsOrCandidates" destination="OP1-W1-VXr" id="G7O-yo-gsW"/>
                         <outlet property="tillerTableView" destination="80H-Zb-KbM" id="DLS-ao-Zaa"/>
                     </connections>
                 </viewController>

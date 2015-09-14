@@ -10,6 +10,7 @@ import UIKit
 
 class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var officialsOrCandidates: UISegmentedControl!
     
     @IBOutlet weak var TillerTableView: UITableView!
     
@@ -20,6 +21,7 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
     @IBOutlet weak var candidatesOrOfficials: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
 
         let url = NSURL(string: "https://staging.voteraide.com/api/users")
         let request = NSURLRequest(URL: url!)
@@ -55,21 +57,20 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        if candidates == false
-//        {
-            let cell = tableView.dequeueReusableCellWithIdentifier("Official") as! TillerOfficialTableViewCell
+        if officialsOrCandidates.selectedSegmentIndex == 0
+        {
+            var cell = tableView.dequeueReusableCellWithIdentifier("Official") as! TillerOfficialTableViewCell
         
             cell.officialsImageView.image = UIImage(named: imagesArray[indexPath.row])
 
             return cell
-//        }
-//        else
-//        {
-//            let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as! TillerTableViewCell
-//            
-//            cell.candidateName.text = "Ronald Regean"
-//            return cell
-//        }
+        }
+        else
+        {
+            var cell = tableView.dequeueReusableCellWithIdentifier("Candidates") as! UITableViewCell
+            
+            return cell
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,6 +82,13 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
     {
         
     }
+    
 
+    @IBAction func segmentControlTap(sender: AnyObject)
+    {
+        print(sender.selectedSegmentIndex)
+        self.TillerTableView.reloadData()
+
+    }
    
 }

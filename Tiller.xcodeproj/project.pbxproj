@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9603E1691B85528E00C5D662 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9603E1681B85528E00C5D662 /* LogInViewController.swift */; };
 		965B80B61BA7472A00278393 /* TillerOfficialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B80B51BA7472A00278393 /* TillerOfficialTableViewCell.swift */; };
+		965B80B81BA78DE700278393 /* TillerCandidatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */; };
 		967C6B901B8BE1AF00FC976F /* TillerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */; };
 		967C6B921B8CFF6900FC976F /* PagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C6B911B8CFF6900FC976F /* PagedViewController.swift */; };
 		9691A6381B82857A0048D245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691A6371B82857A0048D245 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		9603E1681B85528E00C5D662 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		965B80B51BA7472A00278393 /* TillerOfficialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerOfficialTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerCandidatesTableViewCell.swift; sourceTree = "<group>"; };
 		967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerTableViewCell.swift; sourceTree = "<group>"; };
 		967C6B911B8CFF6900FC976F /* PagedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedViewController.swift; sourceTree = "<group>"; };
 		9691A6321B82857A0048D245 /* Tiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 			children = (
 				965B80B51BA7472A00278393 /* TillerOfficialTableViewCell.swift */,
 				9691A6371B82857A0048D245 /* AppDelegate.swift */,
+				965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */,
 				9691A6391B82857A0048D245 /* ViewController.swift */,
 				9691A6571B8290B40048D245 /* ProfileVC.swift */,
 				9691A6591B8298F70048D245 /* TillerViewController.swift */,
@@ -248,6 +251,7 @@
 				9691A63A1B82857A0048D245 /* ViewController.swift in Sources */,
 				965B80B61BA7472A00278393 /* TillerOfficialTableViewCell.swift in Sources */,
 				9603E1691B85528E00C5D662 /* LogInViewController.swift in Sources */,
+				965B80B81BA78DE700278393 /* TillerCandidatesTableViewCell.swift in Sources */,
 				9691A6381B82857A0048D245 /* AppDelegate.swift in Sources */,
 				967C6B921B8CFF6900FC976F /* PagedViewController.swift in Sources */,
 			);
