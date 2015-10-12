@@ -13,15 +13,19 @@
 		967C6B901B8BE1AF00FC976F /* TillerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */; };
 		967C6B921B8CFF6900FC976F /* PagedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C6B911B8CFF6900FC976F /* PagedViewController.swift */; };
 		9691A6381B82857A0048D245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691A6371B82857A0048D245 /* AppDelegate.swift */; };
-		9691A63A1B82857A0048D245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691A6391B82857A0048D245 /* ViewController.swift */; };
 		9691A63D1B82857A0048D245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9691A63B1B82857A0048D245 /* Main.storyboard */; };
 		9691A63F1B82857A0048D245 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9691A63E1B82857A0048D245 /* Images.xcassets */; };
 		9691A6421B82857A0048D245 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9691A6401B82857A0048D245 /* LaunchScreen.xib */; };
 		9691A64E1B82857A0048D245 /* TillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691A64D1B82857A0048D245 /* TillerTests.swift */; };
 		9691A6581B8290B40048D245 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691A6571B8290B40048D245 /* ProfileVC.swift */; };
 		9691A65A1B8298F70048D245 /* TillerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9691A6591B8298F70048D245 /* TillerViewController.swift */; };
+		969BB4981BBCB8490035D045 /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969BB4971BBCB8490035D045 /* NewsFeedTableViewCell.swift */; };
+		969BB49A1BBDA5040035D045 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969BB4991BBDA5040035D045 /* HomeViewController.swift */; };
 		969C537C1B87E5A50090AAED /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C537B1B87E5A50090AAED /* MessagesViewController.swift */; };
 		969C537E1B87F2470090AAED /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C537D1B87F2470090AAED /* SearchViewController.swift */; };
+		96B02E161BA8E8EA0084E590 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B02E151BA8E8EA0084E590 /* CarouselTableViewCell.swift */; };
+		96B02E181BA8F32F0084E590 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B02E171BA8F32F0084E590 /* CarouselCollectionViewCell.swift */; };
+		96B22B921BC3964F003A7CC1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B22B911BC3964F003A7CC1 /* PostViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		96E7B4DE1BA370DA0025847A /* TillerPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7B4DD1BA370DA0025847A /* TillerPracticeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,12 +43,11 @@
 		9603E1681B85528E00C5D662 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		965B80B51BA7472A00278393 /* TillerOfficialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerOfficialTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerCandidatesTableViewCell.swift; sourceTree = "<group>"; };
-		967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerTableViewCell.swift; sourceTree = "<group>"; };
+		967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TillerTableViewCell.swift; path = Tiller/TillerTableViewCell.swift; sourceTree = "<group>"; };
 		967C6B911B8CFF6900FC976F /* PagedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedViewController.swift; sourceTree = "<group>"; };
 		9691A6321B82857A0048D245 /* Tiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9691A6361B82857A0048D245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9691A6371B82857A0048D245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9691A6391B82857A0048D245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9691A63C1B82857A0048D245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9691A63E1B82857A0048D245 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9691A6411B82857A0048D245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -53,8 +56,13 @@
 		9691A64D1B82857A0048D245 /* TillerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TillerTests.swift; sourceTree = "<group>"; };
 		9691A6571B8290B40048D245 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		9691A6591B8298F70048D245 /* TillerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerViewController.swift; sourceTree = "<group>"; };
+		969BB4971BBCB8490035D045 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsFeedTableViewCell.swift; path = ../NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
+		969BB4991BBDA5040035D045 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		969C537B1B87E5A50090AAED /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		969C537D1B87F2470090AAED /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		96B02E151BA8E8EA0084E590 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselTableViewCell.swift; sourceTree = "<group>"; };
+		96B02E171BA8F32F0084E590 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		96B22B911BC3964F003A7CC1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		96E7B4DD1BA370DA0025847A /* TillerPracticeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerPracticeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +87,7 @@
 		9691A6291B8285790048D245 = {
 			isa = PBXGroup;
 			children = (
+				967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */,
 				96E7B4DD1BA370DA0025847A /* TillerPracticeViewController.swift */,
 				967C6B911B8CFF6900FC976F /* PagedViewController.swift */,
 				9691A6341B82857A0048D245 /* Tiller */,
@@ -99,14 +108,17 @@
 		9691A6341B82857A0048D245 /* Tiller */ = {
 			isa = PBXGroup;
 			children = (
+				969BB4971BBCB8490035D045 /* NewsFeedTableViewCell.swift */,
 				965B80B51BA7472A00278393 /* TillerOfficialTableViewCell.swift */,
 				9691A6371B82857A0048D245 /* AppDelegate.swift */,
 				965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */,
-				9691A6391B82857A0048D245 /* ViewController.swift */,
 				9691A6571B8290B40048D245 /* ProfileVC.swift */,
 				9691A6591B8298F70048D245 /* TillerViewController.swift */,
 				9691A63B1B82857A0048D245 /* Main.storyboard */,
-				967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */,
+				96B22B911BC3964F003A7CC1 /* PostViewController.swift */,
+				969BB4991BBDA5040035D045 /* HomeViewController.swift */,
+				96B02E151BA8E8EA0084E590 /* CarouselTableViewCell.swift */,
+				96B02E171BA8F32F0084E590 /* CarouselCollectionViewCell.swift */,
 				969C537D1B87F2470090AAED /* SearchViewController.swift */,
 				969C537B1B87E5A50090AAED /* MessagesViewController.swift */,
 				9603E1681B85528E00C5D662 /* LogInViewController.swift */,
@@ -186,6 +198,8 @@
 		9691A62A1B8285790048D245 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Thomas Gibbons";
 				TargetAttributes = {
@@ -242,18 +256,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969BB4981BBCB8490035D045 /* NewsFeedTableViewCell.swift in Sources */,
 				969C537C1B87E5A50090AAED /* MessagesViewController.swift in Sources */,
 				96E7B4DE1BA370DA0025847A /* TillerPracticeViewController.swift in Sources */,
 				969C537E1B87F2470090AAED /* SearchViewController.swift in Sources */,
 				9691A65A1B8298F70048D245 /* TillerViewController.swift in Sources */,
+				969BB49A1BBDA5040035D045 /* HomeViewController.swift in Sources */,
 				967C6B901B8BE1AF00FC976F /* TillerTableViewCell.swift in Sources */,
 				9691A6581B8290B40048D245 /* ProfileVC.swift in Sources */,
-				9691A63A1B82857A0048D245 /* ViewController.swift in Sources */,
+				96B22B921BC3964F003A7CC1 /* PostViewController.swift in Sources */,
 				965B80B61BA7472A00278393 /* TillerOfficialTableViewCell.swift in Sources */,
 				9603E1691B85528E00C5D662 /* LogInViewController.swift in Sources */,
+				96B02E161BA8E8EA0084E590 /* CarouselTableViewCell.swift in Sources */,
 				965B80B81BA78DE700278393 /* TillerCandidatesTableViewCell.swift in Sources */,
 				9691A6381B82857A0048D245 /* AppDelegate.swift in Sources */,
 				967C6B921B8CFF6900FC976F /* PagedViewController.swift in Sources */,
+				96B02E181BA8F32F0084E590 /* CarouselCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

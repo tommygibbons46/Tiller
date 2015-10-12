@@ -31,7 +31,9 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellID") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellID", forIndexPath: indexPath)
+//        let cell = tableView.dequeueReusableCellWithIdentifier("cellID")
+        
         cell.textLabel?.text = tableDataArray[indexPath.row]
         return cell
         

@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-//        let tabBar = self.window?.rootViewController as! UITabBarController
-//        tabBar.selectedIndex = 2
+//        let tabBarController = self.window?.rootViewController as! UITabBarController
+//        tabBarController.tabBarItem.image = UIImage(named: "3dots")
+//        tabBarController.tabBarItem.s
         return true
     }
 

@@ -8,16 +8,18 @@
 
 import UIKit
 
-class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableViewDataSource, UITableViewDelegate {
+class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableViewDataSource, UITableViewDelegate
+{
     
     @IBOutlet weak var officialsOrCandidates: UISegmentedControl!
     
     @IBOutlet weak var TillerTableView: UITableView!
-    
+    var lastTouchedCell : TillerOfficialTableViewCell?
     var candidates : Bool?
-    
+    var expandedIndexPath : NSIndexPath?
     let imagesArray = ["bush", "carson","christie", "trump"]
-
+    let officesArray = ["President", "Senator", "Congress", "Mayor"]
+    var tapRecognizer = UITapGestureRecognizer()
     @IBOutlet weak var candidatesOrOfficials: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,64 +31,128 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
 
         candidates = false
         
-//        self.TillerTableView.rowHeight = UITableViewAutomaticDimension
-//        self.TillerTableView.estimatedRowHeight = 400
+        self.TillerTableView.rowHeight = UITableViewAutomaticDimension
+        self.TillerTableView.estimatedRowHeight = 400
     }
     
-    func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
-        println("received a challenge")
-    }
     
-    func connection(connection: NSURLConnection, didFailWithError error: NSError) {
-        println("here is our error: \(error)")
-
-    }
-    
-    func connection(connection: NSURLConnection, willSendRequestForAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
-        
-        let credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust)
-        
-        challenge.sender.useCredential(credential, forAuthenticationChallenge: challenge)
-        challenge.sender.continueWithoutCredentialForAuthenticationChallenge(challenge)
-    }
+//    func connection(connection: NSURLConnection, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
+//        print("received a challenge", terminator: "")
+//    }
+//    
+//    func connection(connection: NSURLConnection, didFailWithError error: NSError) {
+//        print("here is our error: \(error)")
+//
+//    }
+//    
+//    func connection(connection: NSURLConnection, willSendRequestForAuthenticationChallenge challenge: NSURLAuthenticationChallenge) {
+//        
+//        let credential = NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!)
+//        
+//        challenge.sender.useCredential(credential, forAuthenticationChallenge: challenge)
+//        challenge.sender!.continueWithoutCredentialForAuthenticationChallenge(challenge)
+//    }
   
-    func rotate()
-    {
-//        let degrees = 20
-//        tiller.transform = CGAffineTransformMakeRotation(CGFloat(70 * M_PI/180))
-    }
-
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+      
+        
         if officialsOrCandidates.selectedSegmentIndex == 0
         {
-            var cell = tableView.dequeueReusableCellWithIdentifier("Official") as! TillerOfficialTableViewCell
-        
+            let cell = tableView.dequeueReusableCellWithIdentifier("Official") as! TillerOfficialTableViewCell
+            if indexPath == expandedIndexPath
+            {
+                print("should be hiding")
+                cell.tiller.hidden = false
+            }
+            else
+            {
+                cell.tiller.hidden = true
+            }
+            
             cell.officialsImageView.image = UIImage(named: imagesArray[indexPath.row])
 
             return cell
         }
         else
         {
-            var cell = tableView.dequeueReusableCellWithIdentifier("Candidates") as! UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("Candidates") as! CarouselTableViewCell
             
+            cell.officeLabel.text = officesArray[indexPath.row]
+            cell.officeLabel.textColor = UIColor.whiteColor()
             return cell
         }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return imagesArray.count
     }
-    
-    @IBAction func candidatesOrOfficialsTape(sender: AnyObject)
-    {
-        
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+        if indexPath == expandedIndexPath
+        {
+            
+            return 250
+        }
+        else
+        {
+//            var cell = tableView.cellForRowAtIndexPath(indexPath) as! TillerOfficialTableViewCell
+//            cell.tiller.hidden = false
+//            cell.tiller.hidden = true
+            return 100
+        }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if officialsOrCandidates.selectedSegmentIndex == 0
+        {
+            tableView.deselectRowAtIndexPath(indexPath, animated: false)
+            var cell = tableView.cellForRowAtIndexPath(indexPath) as! TillerOfficialTableViewCell
+            tableView.beginUpdates()
+            if indexPath == expandedIndexPath
+            {
+                print("tap on a tap")
+            }
+            else
+            {
+                expandedIndexPath = indexPath
+                if (lastTouchedCell != nil)
+                {
+                    lastTouchedCell?.removeGestureRecognizer(tapRecognizer)
+                    lastTouchedCell?.tiller.hidden = true
+                }
+                var cell = tableView.cellForRowAtIndexPath(indexPath) as! TillerOfficialTableViewCell
+                cell.tiller.hidden = false
+                tapRecognizer = UITapGestureRecognizer(target: self, action: "ourTap:")
+                cell.addGestureRecognizer(tapRecognizer)
+                lastTouchedCell = cell
+                
+                //we just added a gesture recognizer, but now we need to remove the recognizer from every other cell
+                print("new tap")
+            }
+            tableView.endUpdates()
+        }
+    }
+    
+    func ourTap(tap: UIGestureRecognizer)
+    {
+        let location = tap.locationInView(self.view)
+        var cell = tap.view as! TillerOfficialTableViewCell
+        if location.x > self.view.frame.width/2
+        {
+            cell.turnRight()
+        }
+        else
+        {
+            cell.turnLeft()
+        }
+        
+    }
 
     @IBAction func segmentControlTap(sender: AnyObject)
     {
-        print(sender.selectedSegmentIndex)
+        print(sender.selectedSegmentIndex, terminator: "")
         self.TillerTableView.reloadData()
 
     }
