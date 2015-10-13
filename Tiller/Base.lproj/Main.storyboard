@@ -1025,7 +1025,7 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="moN-9Z-D2G">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="reK-Aa-DXf">
-                                                        <size key="itemSize" width="122" height="112"/>
+                                                        <size key="itemSize" width="173" height="175"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1045,47 +1045,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="122" height="112"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="173" height="175"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ON-ft-4fv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                                    </imageView>
-                                                                </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
                                                             <color key="backgroundColor" red="0.99215686270000003" green="0.89019607840000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="bottomMargin" secondItem="2ON-ft-4fv" secondAttribute="bottom" constant="-8" id="7ml-rw-4so"/>
-                                                                <constraint firstAttribute="trailingMargin" secondItem="2ON-ft-4fv" secondAttribute="trailing" constant="-8" id="9Gx-9Z-e2b"/>
-                                                                <constraint firstItem="2ON-ft-4fv" firstAttribute="leading" secondItem="J9L-Pb-aPH" secondAttribute="leadingMargin" constant="-8" id="GPZ-zL-GKr"/>
-                                                                <constraint firstItem="2ON-ft-4fv" firstAttribute="top" secondItem="J9L-Pb-aPH" secondAttribute="topMargin" constant="-8" id="Zbu-PE-2dj"/>
-                                                            </constraints>
-                                                            <variation key="default">
-                                                                <mask key="subviews">
-                                                                    <exclude reference="2ON-ft-4fv"/>
-                                                                </mask>
-                                                                <mask key="constraints">
-                                                                    <exclude reference="7ml-rw-4so"/>
-                                                                    <exclude reference="9Gx-9Z-e2b"/>
-                                                                    <exclude reference="GPZ-zL-GKr"/>
-                                                                    <exclude reference="Zbu-PE-2dj"/>
-                                                                </mask>
-                                                            </variation>
-                                                            <variation key="widthClass=compact">
-                                                                <mask key="subviews">
-                                                                    <include reference="2ON-ft-4fv"/>
-                                                                </mask>
-                                                                <mask key="constraints">
-                                                                    <include reference="7ml-rw-4so"/>
-                                                                    <include reference="9Gx-9Z-e2b"/>
-                                                                    <include reference="GPZ-zL-GKr"/>
-                                                                    <include reference="Zbu-PE-2dj"/>
-                                                                </mask>
-                                                            </variation>
-                                                            <connections>
-                                                                <outlet property="candidateImage" destination="2ON-ft-4fv" id="vce-2d-5XH"/>
-                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <variation key="widthClass=compact" misplaced="YES">

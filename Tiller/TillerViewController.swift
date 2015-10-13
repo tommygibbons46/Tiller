@@ -88,19 +88,27 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-
-        if indexPath == expandedIndexPath
+        if officialsOrCandidates.selectedSegmentIndex == 0
         {
-            
-            return 250
+            if indexPath == expandedIndexPath
+            {
+                
+                return 250
+            }
+            else
+            {
+                //            var cell = tableView.cellForRowAtIndexPath(indexPath) as! TillerOfficialTableViewCell
+                //            cell.tiller.hidden = false
+                //            cell.tiller.hidden = true
+                return 100
+            }
         }
         else
         {
-//            var cell = tableView.cellForRowAtIndexPath(indexPath) as! TillerOfficialTableViewCell
-//            cell.tiller.hidden = false
-//            cell.tiller.hidden = true
-            return 100
+            return 250
         }
+
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)

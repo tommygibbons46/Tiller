@@ -27,7 +27,7 @@ class CarouselTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+//        super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
@@ -38,6 +38,13 @@ class CarouselTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellID", forIndexPath: indexPath) as! CarouselCollectionViewCell
+//        cell.candidateImage.frame = CGRectMake(0, 0, 40, 40)
+        let imageView = UIImageView(frame: CGRectMake(0, 0, 175, 175))
+        imageView.backgroundColor = UIColor.redColor()
+        imageView.image = UIImage(named: imagesArray[indexPath.item])
+        cell.addSubview(imageView)
+//        print("cell frame: \(cell.frame) and here is the imageview frame: \(cell.candidateImage.frame)")
+        
 //        let imageView = UIImageView(frame: cell.frame)
 //        imageView.backgroundColor = UIColor.blueColor()
 //        imageView.image = UIImage(named: imagesArray[indexPath.item])
@@ -45,7 +52,7 @@ class CarouselTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
         let imagePath = imagesArray[indexPath.item]
         
         let image = UIImage(named: imagePath)
-        cell.candidateImage.image = image
+//        cell.candidateImage.image = image
         return cell
     }
     
