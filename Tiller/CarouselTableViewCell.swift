@@ -13,6 +13,7 @@ class CarouselTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var officeLabel: UILabel!
     
+    @IBOutlet weak var selectedImageview: UIImageView!
   
     
     let imagesArray = ["bush", "carson","christie", "trump"]
@@ -39,7 +40,7 @@ class CarouselTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellID", forIndexPath: indexPath) as! CarouselCollectionViewCell
 //        cell.candidateImage.frame = CGRectMake(0, 0, 40, 40)
-        let imageView = UIImageView(frame: CGRectMake(0, 0, 175, 175))
+        let imageView = UIImageView(frame: CGRectMake(0, 0, 115, 115))
         imageView.backgroundColor = UIColor.redColor()
         imageView.image = UIImage(named: imagesArray[indexPath.item])
         cell.addSubview(imageView)
@@ -50,10 +51,24 @@ class CarouselTableViewCell: UITableViewCell, UICollectionViewDataSource, UIColl
 //        imageView.image = UIImage(named: imagesArray[indexPath.item])
         
         let imagePath = imagesArray[indexPath.item]
-        
+        let gestureRecgonizer = UITapGestureRecognizer(target: self, action: "tappedCandidate")
+//        cell.addGestureRecognizer(gestureRecgonizer)
         let image = UIImage(named: imagePath)
 //        cell.candidateImage.image = image
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        var imageName = imagesArray[indexPath.item]
+        selectedImageview.image = UIImage(named: imageName)
+        
+        
+    }
+    
+    func tappedCandidate()
+    {
+        print("we had a tap")
     }
     
     

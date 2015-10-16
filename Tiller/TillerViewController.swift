@@ -76,9 +76,9 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
         else
         {
             let cell = tableView.dequeueReusableCellWithIdentifier("Candidates") as! CarouselTableViewCell
-            
-            cell.officeLabel.text = officesArray[indexPath.row]
-            cell.officeLabel.textColor = UIColor.whiteColor()
+            cell.selectedImageview.backgroundColor = UIColor.lightGrayColor()
+//            cell.officeLabel.text = officesArray[indexPath.row]
+//            cell.officeLabel.textColor = UIColor.whiteColor()
             return cell
         }
     }
@@ -93,13 +93,10 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
             if indexPath == expandedIndexPath
             {
                 
-                return 250
+                return 275
             }
             else
             {
-                //            var cell = tableView.cellForRowAtIndexPath(indexPath) as! TillerOfficialTableViewCell
-                //            cell.tiller.hidden = false
-                //            cell.tiller.hidden = true
                 return 100
             }
         }
@@ -132,6 +129,11 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
                 }
                 var cell = tableView.cellForRowAtIndexPath(indexPath) as! TillerOfficialTableViewCell
                 cell.tiller.hidden = false
+//                let button = UIButton(frame: CGRectMake(0, 0, 110, 30))
+//                button.center = cell.center
+//                button.setTitle("Neutral", forState: UIControlState.Normal)
+//                button.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+//                cell.addSubview(button)
                 tapRecognizer = UITapGestureRecognizer(target: self, action: "ourTap:")
                 cell.addGestureRecognizer(tapRecognizer)
                 lastTouchedCell = cell
@@ -142,6 +144,8 @@ class TillerViewController: UIViewController, NSURLConnectionDelegate, UITableVi
             tableView.endUpdates()
         }
     }
+    
+
     
     func ourTap(tap: UIGestureRecognizer)
     {

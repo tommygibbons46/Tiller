@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		9603E1681B85528E00C5D662 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		965B80B51BA7472A00278393 /* TillerOfficialTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerOfficialTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TillerCandidatesTableViewCell.swift; sourceTree = "<group>"; };
+		965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TillerCandidatesTableViewCell.swift; path = Tiller/TillerCandidatesTableViewCell.swift; sourceTree = "<group>"; };
 		967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TillerTableViewCell.swift; path = Tiller/TillerTableViewCell.swift; sourceTree = "<group>"; };
 		967C6B911B8CFF6900FC976F /* PagedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedViewController.swift; sourceTree = "<group>"; };
 		9691A6321B82857A0048D245 /* Tiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +89,7 @@
 			children = (
 				967C6B8F1B8BE1AF00FC976F /* TillerTableViewCell.swift */,
 				96E7B4DD1BA370DA0025847A /* TillerPracticeViewController.swift */,
+				965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */,
 				967C6B911B8CFF6900FC976F /* PagedViewController.swift */,
 				9691A6341B82857A0048D245 /* Tiller */,
 				9691A64A1B82857A0048D245 /* TillerTests */,
@@ -111,14 +112,13 @@
 				969BB4971BBCB8490035D045 /* NewsFeedTableViewCell.swift */,
 				965B80B51BA7472A00278393 /* TillerOfficialTableViewCell.swift */,
 				9691A6371B82857A0048D245 /* AppDelegate.swift */,
-				965B80B71BA78DE700278393 /* TillerCandidatesTableViewCell.swift */,
-				9691A6571B8290B40048D245 /* ProfileVC.swift */,
 				9691A6591B8298F70048D245 /* TillerViewController.swift */,
+				96B02E151BA8E8EA0084E590 /* CarouselTableViewCell.swift */,
+				96B02E171BA8F32F0084E590 /* CarouselCollectionViewCell.swift */,
+				9691A6571B8290B40048D245 /* ProfileVC.swift */,
 				9691A63B1B82857A0048D245 /* Main.storyboard */,
 				96B22B911BC3964F003A7CC1 /* PostViewController.swift */,
 				969BB4991BBDA5040035D045 /* HomeViewController.swift */,
-				96B02E151BA8E8EA0084E590 /* CarouselTableViewCell.swift */,
-				96B02E171BA8F32F0084E590 /* CarouselCollectionViewCell.swift */,
 				969C537D1B87F2470090AAED /* SearchViewController.swift */,
 				969C537B1B87E5A50090AAED /* MessagesViewController.swift */,
 				9603E1681B85528E00C5D662 /* LogInViewController.swift */,
